@@ -23,3 +23,4 @@ exclude:
   - README.md
   - SECURITY_NOTES.md
   - CNAME.example
+  - files/images/icons/ORCID Outreach Resources
