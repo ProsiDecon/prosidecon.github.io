@@ -1,0 +1,25 @@
+title: Daniel Prosi
+email: daniel.prosi@eui.eu
+description: Academic website for Daniel Prosi
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+timezone: Europe/Berlin
+
+collections:
+  research:
+    output: false
+  policy:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - SECURITY_NOTES.md
+  - CNAME.example

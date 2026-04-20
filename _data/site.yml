@@ -1,0 +1,34 @@
+name: Daniel Prosi
+affiliation: European University Institute
+email: daniel.prosi@eui.eu
+description: >
+  PhD student in Economics working on firm interactions, production networks,
+  macroeconomics of growth and development, network econometrics, causal
+  inference, and structural transformation.
+profile_image: /files/images/profile/profile.JPG
+hero_image: /images/hero.jpg
+cv_path: /files/CV/CV_prosi.pdf
+social:
+  email:
+    label: Email
+    href: mailto:daniel.prosi@eui.eu
+    icon: /files/images/icons/email.png
+  linkedin:
+    label: LinkedIn
+    href: https://www.linkedin.com/in/daniel-prosi-b4a398156/
+    icon: /files/images/icons/LI-In-Bug.png
+  github:
+    label: GitHub
+    href: https://github.com/ProsiDecon
+    icon: /images/icons/github.svg
+  orcid:
+    label: ORCID
+    href: https://orcid.org/0009-0000-2136-9761
+    icon: /files/images/icons/ORCID-iD_icon_vector.svg
+navigation:
+  - title: Research
+    url: /research/
+  - title: Policy Work
+    url: /policy-work/
+  - title: CV
+    url: /cv/

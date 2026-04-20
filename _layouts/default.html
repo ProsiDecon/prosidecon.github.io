@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}</title>
+    <meta name="description" content="{{ site.data.site.description }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/files/images/icons/favicon.ico' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/files/images/icons/apple-touch-icon-180x180.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  </head>
+  <body>
+    {% include site-header.html %}
+    <main id="content" class="site-main">
+      {{ content }}
+    </main>
+    {% include site-footer.html %}
+  </body>
+</html>

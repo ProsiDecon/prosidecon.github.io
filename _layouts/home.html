@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<section
+  class="hero hero-home"
+  aria-label="Homepage hero"
+  style="--hero-image: url('{{ site.data.site.hero_image | relative_url }}');"
+>
+  <div class="hero__overlay">
+    <div class="container hero__content">
+      <p class="hero__eyebrow">{{ site.data.site.affiliation }}</p>
+      <h1>{{ site.data.site.name }}</h1>
+      <p class="hero__lede">{{ site.data.site.description }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="container home-grid">
+  <aside class="profile-card" aria-label="Profile">
+    <div class="profile-photo-frame">
+      <span class="profile-photo-fallback" aria-hidden="true">DP</span>
+      <img
+        class="profile-photo"
+        src="{{ site.data.site.profile_image | relative_url }}"
+        alt="Portrait of {{ site.data.site.name }}"
+        loading="lazy"
+      >
+    </div>
+    <div class="profile-card__copy">
+      <h2>{{ site.data.site.name }}</h2>
+      <p class="profile-card__affiliation">{{ site.data.site.affiliation }}</p>
+      {% include social-links.html %}
+    </div>
+  </aside>
+
+  <article class="home-content">
+    {{ content }}
+
+    <section class="embed-zone" aria-labelledby="videos-heading">
+      <div class="section-heading">
+        <h3 id="videos-heading">Video Highlights</h3>
+      </div>
+      <div class="embed-placeholder">
+        <p>Add future YouTube embeds or linked talks here.</p>
+        <!-- Future video embeds go here. Example:
+        <div class="responsive-embed">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen></iframe>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <section class="embed-zone" aria-labelledby="social-heading">
+      <div class="section-heading">
+        <h3 id="social-heading">Social and Commentary</h3>
+      </div>
+      <div class="embed-placeholder">
+        <p>Add future X posts, external links, or short commentary blocks here.</p>
+        <!-- Future X embeds or external post links go here. Keep third-party scripts isolated if you add them later. -->
+      </div>
+    </section>
+
+    <section class="embed-zone" aria-labelledby="articles-heading">
+      <div class="section-heading">
+        <h3 id="articles-heading">Applied Writing</h3>
+      </div>
+      <div class="embed-placeholder">
+        <p>Add future LinkedIn articles, essays, or featured writing here.</p>
+        <!-- Future LinkedIn article embeds or featured article cards go here. -->
+      </div>
+    </section>
+  </article>
+</section>

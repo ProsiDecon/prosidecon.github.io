@@ -1,0 +1,17 @@
+<ul class="social-links" aria-label="Contact and profile links">
+  {% assign links = site.data.site.social %}
+  {% for key in "email,linkedin,github,orcid" | split: "," %}
+    {% assign item = links[key] %}
+    <li>
+      <a
+        href="{{ item.href }}"
+        class="social-link"
+        aria-label="{{ item.label }}"
+        {% unless key == "email" %}target="_blank" rel="noopener noreferrer"{% endunless %}
+      >
+        <img src="{{ item.icon | relative_url }}" alt="" loading="lazy">
+        <span>{{ item.label }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
