@@ -1,20 +1,21 @@
 name: Daniel Prosi
 affiliation: European University Institute
+affiliation_url: https://www.eui.eu/people?id=daniel-prosi-1
 email: daniel.prosi@eui.eu
 description: >
   PhD student in Economics @ EUI
-profile_image: /files/images/profile/profile.JPG
+profile_image: /images/profile/profile.JPG
 hero_image: /images/hero.jpg
 cv_path: /files/CV/CV_prosi.pdf
 social:
   email:
     label: Email
     href: mailto:daniel.prosi@eui.eu
-    icon: /files/images/icons/email.png
+    icon: /images/icons/email.png
   linkedin:
     label: LinkedIn
     href: https://www.linkedin.com/in/daniel-prosi-b4a398156/
-    icon: /files/images/icons/LI-In-Bug.png
+    icon: /images/icons/LI-In-Bug.png
   github:
     label: GitHub
     href: https://github.com/ProsiDecon
@@ -22,7 +23,7 @@ social:
   orcid:
     label: ORCID
     href: https://orcid.org/0009-0000-2136-9761
-    icon: /files/images/icons/ORCID-iD_icon_vector.svg
+    icon: /images/icons/ORCID-iD_icon_vector.svg
 navigation:
   - title: Research
     url: /research/

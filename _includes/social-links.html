@@ -1,17 +1,30 @@
 <ul class="social-links" aria-label="Contact and profile links">
-  {% assign links = site.data.site.social %}
-  {% for key in "email,linkedin,github,orcid" | split: "," %}
-    {% assign item = links[key] %}
-    <li>
-      <a
-        href="{{ item.href }}"
-        class="social-link"
-        aria-label="{{ item.label }}"
-        {% unless key == "email" %}target="_blank" rel="noopener noreferrer"{% endunless %}
-      >
-        <img src="{{ item.icon | relative_url }}" alt="" loading="lazy">
-        <span>{{ item.label }}</span>
-      </a>
-    </li>
-  {% endfor %}
+  {% assign email = site.data.site.social.email %}
+  {% assign linkedin = site.data.site.social.linkedin %}
+  {% assign github = site.data.site.social.github %}
+  {% assign orcid = site.data.site.social.orcid %}
+  <li>
+    <a href="{{ email.href }}" class="social-link" aria-label="{{ email.label }}">
+      <img src="{{ email.icon | relative_url }}" alt="" loading="lazy">
+      <span>{{ email.label }}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ linkedin.href }}" class="social-link" aria-label="{{ linkedin.label }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ linkedin.icon | relative_url }}" alt="" loading="lazy">
+      <span>{{ linkedin.label }}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ github.href }}" class="social-link" aria-label="{{ github.label }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ github.icon | relative_url }}" alt="" loading="lazy">
+      <span>{{ github.label }}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ orcid.href }}" class="social-link" aria-label="{{ orcid.label }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ orcid.icon | relative_url }}" alt="" loading="lazy">
+      <span>{{ orcid.label }}</span>
+    </a>
+  </li>
 </ul>

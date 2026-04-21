@@ -8,9 +8,11 @@ layout: default
 >
   <div class="hero__overlay">
     <div class="container hero__content">
-      <p class="hero__eyebrow">{{ site.data.site.affiliation }}</p>
+      <p class="hero__eyebrow">
+        <a href="{{ site.data.site.affiliation_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.site.affiliation }}</a>
+      </p>
       <h1>{{ site.data.site.name }}</h1>
-      <p class="hero__lede">{{ site.data.site.description }}</p>
+      <p class="hero__lede">PhD student in Economics <a href="{{ site.data.site.affiliation_url }}" target="_blank" rel="noopener noreferrer">@ EUI</a></p>
     </div>
   </div>
 </section>
@@ -28,7 +30,9 @@ layout: default
     </div>
     <div class="profile-card__copy">
       <h2>{{ site.data.site.name }}</h2>
-      <p class="profile-card__affiliation">{{ site.data.site.affiliation }}</p>
+      <p class="profile-card__affiliation">
+        <a href="{{ site.data.site.affiliation_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.site.affiliation }}</a>
+      </p>
       {% include social-links.html %}
     </div>
   </aside>
