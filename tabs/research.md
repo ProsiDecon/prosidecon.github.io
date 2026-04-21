@@ -32,13 +32,29 @@ section_class: page-section--wide
         <div class="collection-card__body">
           {{ paper.content | markdownify }}
         </div>
-        {% if pdf_path_value and pdf_path_value != "" and is_request_only == false %}
-          <p class="collection-card__actions">
+        {% assign links_value = paper.links | default: paper["links"] | default: paper.data.links | default: paper.data["links"] %}
+        {% assign has_links = false %}
+        {% capture research_actions_markup %}
+          {% if links_value %}
+            {% for link in links_value %}
+              {% assign link_label = link.label | default: link["label"] %}
+              {% assign link_url = link.url | default: link["url"] %}
+              {% if link_label and link_label != "" and link_url and link_url != "" %}
+                {% assign has_links = true %}
+                <a class="button-link" href="{{ link_url }}" target="_blank" rel="noopener noreferrer">{{ link_label }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if has_links == false and pdf_path_value and pdf_path_value != "" and is_request_only == false %}
             <a class="button-link" href="{{ pdf_path_value | relative_url }}" download>Download PDF</a>
-          </p>
-        {% elsif is_request_only %}
-          <p class="collection-card__actions">
+          {% elsif has_links == false and is_request_only %}
             <span class="collection-card__availability">Available upon request</span>
+          {% endif %}
+        {% endcapture %}
+        {% assign research_actions_markup = research_actions_markup | strip %}
+        {% if research_actions_markup != "" %}
+          <p class="collection-card__actions collection-card__actions--wrap">
+            {{ research_actions_markup }}
           </p>
         {% endif %}
       </article>
