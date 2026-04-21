@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}</title>
+    <title>{% if page.title and page.title != site.data.site.name %}{{ page.title }} | {% endif %}{{ site.data.site.name }}</title>
     <meta name="description" content="{{ site.data.site.description }}">
     <link rel="icon" type="image/x-icon" href="{{ '/images/icons/favicon.ico' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/images/icons/apple-touch-icon-180x180.png' | relative_url }}">
