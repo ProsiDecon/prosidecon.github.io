@@ -1,5 +1,5 @@
 # Daniel Prosi Academic Website
-
+ 
 This repository contains a lightweight custom Jekyll site for GitHub Pages. Layout and shared chrome live in HTML templates, while the text-heavy content stays in Markdown files and collection items.
 
 ## Project structure
@@ -32,47 +32,6 @@ This repository contains a lightweight custom Jekyll site for GitHub Pages. Layo
    ```
 
 4. Open `http://127.0.0.1:4000/` in your browser.
-
-## Files to edit first
-
-Start with these files:
-
-- `_data/site.yml`: Update profile/contact links, image paths, and the CV path if needed.
-- `_includes/content/about-bio.md`: Edit the About/Home page text.
-- `_research/01-fdi-forward-linkages.md` and `_research/02-shock-propagation-production-networks.md`: Update paper descriptions or PDF paths.
-- `policy-work.md`: Replace the placeholder copy when you are ready.
-- `images/hero.jpg`: Add a hero image for the top section.
-
-## Replacing images
-
-- Profile image:
-  The site currently uses `files/images/profile/profile.JPG`.
-  If you prefer a simpler path, place a new image at `images/profile.jpg` and update `profile_image` in `_data/site.yml`.
-
-- Hero image:
-  Place the hero image at `images/hero.jpg`.
-  The page will still render with a gradient background if the file is missing, but adding the image completes the design.
-
-- Icons:
-  The social icons are wired in `_data/site.yml` to files under `files/images/icons/`.
-
-## Updating profile and contact links
-
-Edit `_data/site.yml` and change:
-
-- `email.href`
-- `linkedin.href`
-- `github.href`
-- `orcid.href`
-
-You can also update:
-
-- `name`
-- `affiliation`
-- `description`
-- `profile_image`
-- `hero_image`
-- `cv_path`
 
 ## Adding a new research paper
 
