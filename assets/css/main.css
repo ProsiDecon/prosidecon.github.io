@@ -526,6 +526,11 @@ p {
   margin-top: 1.3rem;
 }
 
+.collection-card__availability {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
 .collection-card--muted {
   background: rgba(240, 233, 221, 0.7);
 }

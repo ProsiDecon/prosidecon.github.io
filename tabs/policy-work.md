@@ -1,7 +1,7 @@
 ---
 title: Policy Work
 permalink: /policy-work/
-intro: A collection of policy-related work and academic publications on FDI in developing countries and Official Development Assistance related to the Ocean Economy.
+intro: A collection of my policy-related work.
 section_class: page-section--wide
 ---
 <div class="collection-list">

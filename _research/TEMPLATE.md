@@ -1,6 +1,7 @@
 ---
 title: Replace with paper title
 order: 99
+type: Working paper
 coauthors: Coauthor One, Coauthor Two
 pdf_path: /files/papers/replace-with-paper-file.pdf
 ---

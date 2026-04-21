@@ -8,11 +8,17 @@ section_class: page-section--wide
   {% assign papers = site.research | sort: "order" %}
   {% for paper in papers %}
     {% unless paper.path contains "TEMPLATE.md" %}
+      {% assign paper_type = paper.type | default: paper["type"] | default: paper.data.type | default: paper.data["type"] | default: "Working paper" %}
+      {% assign pdf_path_value = paper.pdf_path | default: paper["pdf_path"] | default: paper.data.pdf_path | default: paper.data["pdf_path"] %}
+      {% assign is_request_only = false %}
+      {% if pdf_path_value == "request" %}
+        {% assign is_request_only = true %}
+      {% endif %}
       <article class="collection-card">
-        <p class="collection-card__label">Working paper</p>
+        <p class="collection-card__label">{{ paper_type }}</p>
         <h2 class="collection-card__title">
-          {% if paper.pdf_path and paper.pdf_path != "" %}
-            <a href="{{ paper.pdf_path | relative_url }}" download>
+          {% if pdf_path_value and pdf_path_value != "" and is_request_only == false %}
+            <a href="{{ pdf_path_value | relative_url }}" download>
               {{ paper.title }}
             </a>
           {% else %}
@@ -26,9 +32,13 @@ section_class: page-section--wide
         <div class="collection-card__body">
           {{ paper.content | markdownify }}
         </div>
-        {% if paper.pdf_path and paper.pdf_path != "" %}
+        {% if pdf_path_value and pdf_path_value != "" and is_request_only == false %}
           <p class="collection-card__actions">
-            <a class="button-link" href="{{ paper.pdf_path | relative_url }}" download>Download PDF</a>
+            <a class="button-link" href="{{ pdf_path_value | relative_url }}" download>Download PDF</a>
+          </p>
+        {% elsif is_request_only %}
+          <p class="collection-card__actions">
+            <span class="collection-card__availability">Available upon request</span>
           </p>
         {% endif %}
       </article>
