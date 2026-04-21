@@ -3,4 +3,4 @@ layout: home
 title: Daniel Prosi
 permalink: /
 ---
-{% include_relative about-bio.md %}
+{% include_relative tabs/about-bio.md %}
