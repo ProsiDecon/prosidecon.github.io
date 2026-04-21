@@ -164,6 +164,15 @@ p {
   color: #f7f2eb;
 }
 
+.hero a {
+  color: #eef6ff;
+}
+
+.hero a:hover,
+.hero a:focus-visible {
+  color: #cfe5ff;
+}
+
 .hero__overlay {
   min-height: inherit;
   display: flex;
@@ -191,6 +200,56 @@ p {
   max-width: 44rem;
   font-size: 1.08rem;
   color: rgba(247, 242, 235, 0.84);
+}
+
+.hero__actions {
+  position: absolute;
+  top: 50%;
+  right: clamp(1rem, 3vw, 2rem);
+  transform: translateY(-50%);
+}
+
+.hero-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(12, 22, 34, 0.08);
+  color: #f7f2eb;
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+  transition: background 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.hero-switch:hover,
+.hero-switch:focus-visible {
+  background: rgba(12, 22, 34, 0.16);
+}
+
+.control-chevron {
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-top: 0.17rem solid currentColor;
+  border-right: 0.17rem solid currentColor;
+  transform: rotate(45deg);
+}
+
+.hero-switch .control-chevron {
+  color: rgba(238, 246, 255, 0.92);
+}
+
+.hero-switch:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .home-grid {
@@ -283,6 +342,10 @@ p {
   max-width: 48rem;
 }
 
+.page-section--wide {
+  max-width: min(96%, 68rem);
+}
+
 .home-content > :first-child,
 .page-section > :first-child {
   margin-top: 0;
@@ -293,6 +356,11 @@ p {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.9rem;
+}
+
+.section-heading--news {
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .embed-zone {
@@ -310,6 +378,97 @@ p {
 
 .embed-placeholder {
   padding: 1.4rem;
+}
+
+.recent-news {
+  margin-top: 3rem;
+}
+
+.recent-news__subhead {
+  margin: 0.15rem 0 0;
+  font-size: 0.96rem;
+}
+
+.recent-news__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 253, 250, 0.18);
+  color: var(--accent-deep);
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.recent-news__switch:hover,
+.recent-news__switch:focus-visible {
+  background: rgba(255, 253, 250, 0.42);
+  transform: translateY(-1px);
+}
+
+.recent-news__switch:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.recent-news__switch .control-chevron {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-top-width: 0.15rem;
+  border-right-width: 0.15rem;
+  color: rgba(97, 65, 39, 0.72);
+}
+
+.recent-news__frame {
+  background: linear-gradient(180deg, rgba(255, 253, 250, 0.94), rgba(240, 233, 221, 0.82));
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 2px);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.recent-news__embed-shell {
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 4px);
+  background: rgba(29, 35, 41, 0.08);
+  width: min(100%, 52rem);
+  max-height: min(56vh, 32rem);
+  margin: 0 auto;
+}
+
+.recent-news__embed {
+  display: block;
+  width: 100%;
+  height: min(56vh, 32rem);
+  border: 0;
+  background: #ffffff;
+}
+
+.recent-news__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.94rem;
+}
+
+.recent-news__provider {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.recent-news__link {
+  color: var(--accent-deep);
+  font-weight: 600;
 }
 
 .page-hero {
@@ -342,12 +501,20 @@ p {
 
 .collection-card__title {
   font-size: clamp(1.35rem, 2.3vw, 2rem);
-  max-width: 40rem;
+  max-width: 100%;
 }
 
 .collection-card__title a {
   color: var(--ink);
   text-decoration: none;
+}
+
+.collection-card__meta {
+  margin-top: -0.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-soft);
 }
 
 .collection-card__body p:last-child,
@@ -482,5 +649,21 @@ p {
 
   .hero__content {
     padding-bottom: 3rem;
+  }
+
+  .hero__actions {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+    transform: none;
+  }
+
+  .recent-news__embed {
+    height: min(48vh, 26rem);
+  }
+
+  .recent-news__meta {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

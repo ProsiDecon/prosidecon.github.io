@@ -5,7 +5,12 @@ email: daniel.prosi@eui.eu
 description: >
   PhD student in Economics @ EUI
 profile_image: /images/profile/profile.JPG
-hero_image: /images/hero.jpg
+hero_image: /images/heros/hero-1.jpg
+hero_images:
+  - /images/heros/hero-1.jpg
+  - /images/heros/hero-2.jpg
+  - /images/heros/hero-3.jpg
+  - /images/heros/hero-4.jpg
 cv_path: /files/CV/CV_prosi.pdf
 social:
   email:
@@ -31,3 +36,12 @@ navigation:
     url: /policy-work/
   - title: CV
     url: /cv/
+recent_news:
+  - title: LinkedIn Video
+    provider: LinkedIn
+    url: https://www.linkedin.com/feed/update/urn:li:activity:7447943695087120384/?originTrackingId=tSJYmrNRdO8Wrq3K3%2BnB0A%3D%3D
+    embed_url: https://www.linkedin.com/embed/feed/update/urn:li:activity:7447943695087120384
+  - title: LinkedIn Update
+    provider: LinkedIn
+    url: https://www.linkedin.com/feed/update/urn:li:activity:7451912265219399680/?originTrackingId=wiFu1JW3ZeP7m0l6g1SSRQ%3D%3D
+    embed_url: https://www.linkedin.com/embed/feed/update/urn:li:activity:7451912265219399680

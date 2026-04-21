@@ -4,6 +4,7 @@ layout: default
 <section
   class="hero hero-home"
   aria-label="Homepage hero"
+  data-default-hero="{{ site.data.site.hero_image | relative_url }}"
   style="--hero-image: url('{{ site.data.site.hero_image | relative_url }}');"
 >
   <div class="hero__overlay">
@@ -13,9 +14,21 @@ layout: default
       </p>
       <h1>{{ site.data.site.name }}</h1>
       <p class="hero__lede">PhD student in Economics <a href="{{ site.data.site.affiliation_url }}" target="_blank" rel="noopener noreferrer">@ EUI</a></p>
+      <div class="hero__actions">
+        <button
+          class="hero-switch"
+          type="button"
+          aria-label="Show another hero image"
+          {% if site.data.site.hero_images.size <= 1 %}disabled{% endif %}
+        >
+          <span class="control-chevron" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </div>
 </section>
+<script id="hero-images-data" type="application/json">{{ site.data.site.hero_images | jsonify }}</script>
+<script id="recent-news-data" type="application/json">{{ site.data.site.recent_news | jsonify }}</script>
 
 <section class="container home-grid">
   <aside class="profile-card" aria-label="Profile">
@@ -40,37 +53,36 @@ layout: default
   <article class="home-content">
     {{ content }}
 
-    <section class="embed-zone" aria-labelledby="videos-heading">
-      <div class="section-heading">
-        <h3 id="videos-heading">Video Highlights</h3>
-      </div>
-      <div class="embed-placeholder">
-        <p>Add future YouTube embeds or linked talks here.</p>
-        <!-- Future video embeds go here. Example:
-        <div class="responsive-embed">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen></iframe>
+    <section class="embed-zone recent-news" aria-labelledby="recent-news-heading">
+      <div class="section-heading section-heading--news">
+        <div>
+          <h3 id="recent-news-heading">Recent News</h3>
+          <p class="recent-news__subhead">Selected talks, videos, and posts.</p>
         </div>
-        -->
+        <button
+          class="recent-news__switch"
+          type="button"
+          aria-label="Show next news item"
+          {% if site.data.site.recent_news.size <= 1 %}disabled{% endif %}
+        >
+          <span class="control-chevron" aria-hidden="true"></span>
+        </button>
       </div>
-    </section>
-
-    <section class="embed-zone" aria-labelledby="social-heading">
-      <div class="section-heading">
-        <h3 id="social-heading">Social and Commentary</h3>
-      </div>
-      <div class="embed-placeholder">
-        <p>Add future X posts, external links, or short commentary blocks here.</p>
-        <!-- Future X embeds or external post links go here. Keep third-party scripts isolated if you add them later. -->
-      </div>
-    </section>
-
-    <section class="embed-zone" aria-labelledby="articles-heading">
-      <div class="section-heading">
-        <h3 id="articles-heading">Applied Writing</h3>
-      </div>
-      <div class="embed-placeholder">
-        <p>Add future LinkedIn articles, essays, or featured writing here.</p>
-        <!-- Future LinkedIn article embeds or featured article cards go here. -->
+      <div class="recent-news__frame">
+        {% assign first_news = site.data.site.recent_news[0] %}
+        <div class="recent-news__embed-shell">
+          <iframe
+            class="recent-news__embed"
+            src="{{ first_news.embed_url }}"
+            title="{{ first_news.title }}"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="recent-news__meta">
+          <span class="recent-news__provider">{{ first_news.provider }}</span>
+          <a class="recent-news__link" href="{{ first_news.url }}" target="_blank" rel="noopener noreferrer">Open original</a>
+        </p>
       </div>
     </section>
   </article>

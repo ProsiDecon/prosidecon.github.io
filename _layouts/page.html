@@ -11,6 +11,6 @@ layout: default
   </div>
 </section>
 
-<section class="container page-section">
+<section class="container page-section{% if page.section_class %} {{ page.section_class }}{% endif %}">
   {{ content }}
 </section>
