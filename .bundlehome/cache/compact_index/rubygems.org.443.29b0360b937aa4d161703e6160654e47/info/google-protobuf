@@ -1635,3 +1635,15 @@
 4.34.1-x86_64-linux-musl bigdecimal:>= 0,rake:~> 13.3|checksum:8c0e91436fbe504ffc64f0bd621f2e69adbcce8ed2c58439d7a21117069cfdd7,ruby:< 4.1.dev&>= 3.1,rubygems:>= 3.3.22
 4.34.1 bigdecimal:>= 0,rake:~> 13.3|checksum:347181542b8d659c60f028fa3791c9cccce651a91ad27782dbc5c5e374796cdc,ruby:>= 3.1
 4.34.1-java bigdecimal:>= 0,ffi:~> 1,ffi-compiler:~> 1,rake:~> 13.3|checksum:b61f7f754842171af103130b94c72760888be271ce8cf79cdb1913e8f5674c5e,ruby:>= 3.1
+4.35.0.rc.1-aarch64-linux-gnu bigdecimal:>= 0,rake:~> 13.3|checksum:0554985e91465cb9f6024f2f8423934f285dd6ec7e34771da9642ff746494b98,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1-aarch64-linux-musl bigdecimal:>= 0,rake:~> 13.3|checksum:009d157aedeb9c9ba7b9ea6806df0cc40baabe99165f1779cc6db315ee196133,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1-arm64-darwin bigdecimal:>= 0,rake:~> 13.3|checksum:fd541e8ef93a401c19a8a30f42f20c61d4c6dfdc36def4d94e6e9883603164ef,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1
+4.35.0.rc.1-x64-mingw-ucrt bigdecimal:>= 0,rake:~> 13.3|checksum:60d9a11fb92b5258ad195adab3003766dfde2d24ed17468b8100fa95f6931957,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1
+4.35.0.rc.1-x86-linux-gnu bigdecimal:>= 0,rake:~> 13.3|checksum:abc78a8665cb06104dd375dcd10b3d0844197dad3c09095354a433439c07e0a2,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1-x86-linux-musl bigdecimal:>= 0,rake:~> 13.3|checksum:28b4ba07316f9ecee8328c5390cc4cd3107cafc6bc24fc674706426b46624aef,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1-x86-mingw32 bigdecimal:>= 0,rake:~> 13.3|checksum:aa4adfe09faca93a94b28de68ae3cf4f209971ba8148a301fc7e52cd91a50a8e,ruby:< 3.5.dev&>= 3.1,rubygems:> 1.3.1
+4.35.0.rc.1-x86_64-darwin bigdecimal:>= 0,rake:~> 13.3|checksum:1442d6e2998ae9773b8485fb0f844bf3795f1e38dc597da46d03eff52f93853d,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1
+4.35.0.rc.1-x86_64-linux-gnu bigdecimal:>= 0,rake:~> 13.3|checksum:768891422bef7ee7e96d0359338d6bac3269cadcec708a868960a744c5426a40,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1-x86_64-linux-musl bigdecimal:>= 0,rake:~> 13.3|checksum:f33479f41210c6006c92a3c0fe5199e2a5d5a492d6e79b5d8ca4a1d7e396cb45,ruby:< 4.1.dev&>= 3.1,rubygems:> 1.3.1&>= 3.3.22
+4.35.0.rc.1 bigdecimal:>= 0,rake:~> 13.3|checksum:9f4b0fdf8e4400e3c48b4abb0ab5cec9c52e6dc7beb10f900bfb69171100eca6,ruby:>= 3.1,rubygems:> 1.3.1
+4.35.0.rc.1-java bigdecimal:>= 0,ffi:~> 1,ffi-compiler:~> 1,rake:~> 13.3|checksum:5e1cb9cb3a0a9f691cf1c8514f25ef9065be6b9381ec5a5dcab09173c149aff8,ruby:>= 3.1,rubygems:> 1.3.1
