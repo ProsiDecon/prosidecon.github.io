@@ -252,6 +252,48 @@ p {
   cursor: default;
 }
 
+.hero-info {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid rgba(247, 242, 235, 0.52);
+  border-radius: 999px;
+  background: rgba(12, 22, 34, 0.24);
+  color: #f7f2eb;
+  font: 700 1rem/1 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 160ms ease, border-color 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.hero-info:hover,
+.hero-info:focus-visible,
+.hero-info[aria-expanded="true"] {
+  background: rgba(12, 22, 34, 0.42);
+  border-color: rgba(247, 242, 235, 0.84);
+}
+
+.hero-info-popup {
+  position: fixed;
+  z-index: 1200;
+  max-width: min(18rem, calc(100vw - 2rem));
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.5rem;
+  background: rgba(69, 73, 78, 0.94);
+  color: #f7f2eb;
+  box-shadow: 0 14px 34px rgba(12, 22, 34, 0.28);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
 .home-grid {
   display: grid;
   grid-template-columns: minmax(15rem, 20rem) minmax(0, 1fr);
@@ -671,9 +713,14 @@ p {
 
   .hero__actions {
     top: auto;
-    right: 1rem;
+    right: 3.75rem;
     bottom: 1rem;
     transform: none;
+  }
+
+  .hero-info {
+    right: 1rem;
+    bottom: 1.25rem;
   }
 
   .recent-news__embed {
