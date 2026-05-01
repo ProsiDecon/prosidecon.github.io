@@ -8,13 +8,13 @@ profile_image: /images/profile/profile.JPG
 hero_image: /images/heros/hero-1.jpg
 hero_images:
   - image: /images/heros/hero-1.jpg
-    info: A view over Lake Mutanda in southern Uganda. In the background you see the Virunga Mountain range - Mount Muhavura, Mount Gahinga, and Mount Sabyinyo - the tripoint between Uganda, Rwanda, and DR Congo.
+    info: A view over Lake Mutanda in southern Uganda. In the background Mount Muhavura, Mount Gahinga, and Mount Sabyinyo - the tripoint between Uganda, Rwanda, and DR Congo.
   - image: /images/heros/hero-2.jpg
-    info: A winter sunrise view over the rooftops of Florence - Brunelleschi's cupola of Santa Maria del Fiore and the contrasting snow-covered Alpi Appennini in the background.
+    info: A winter sunrise over the rooftops of Florence - Brunelleschi's cupola of Santa Maria del Fiore and the contrasting snow-covered Alpi Appennini in the background.
   - image: /images/heros/hero-3.jpg
     info: Piz Bernina with the elegant Biancograt - a memorable alpine tour.
   - image: /images/heros/hero-4.jpg
-    info: Winding paths up to Rigugio Brentei in the Doomiti di Brenta.
+    info: Winding paths up to Rifugio Brentei in the Dolomiti di Brenta.
 cv_path: /files/CV/CV_prosi.pdf
 social:
   email:
