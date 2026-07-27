@@ -431,6 +431,12 @@ p {
   font-size: 0.96rem;
 }
 
+.recent-news__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .recent-news__switch {
   display: flex;
   align-items: center;
@@ -467,6 +473,10 @@ p {
   border-top-width: 0.15rem;
   border-right-width: 0.15rem;
   color: rgba(97, 65, 39, 0.72);
+}
+
+.recent-news__switch--previous .control-chevron {
+  transform: rotate(225deg);
 }
 
 .recent-news__frame {

@@ -68,14 +68,24 @@ layout: default
           <h3 id="recent-news-heading">Recent News</h3>
           <p class="recent-news__subhead">Selected talks, videos, and posts.</p>
         </div>
-        <button
-          class="recent-news__switch"
-          type="button"
-          aria-label="Show next news item"
-          {% if site.data.site.recent_news.size <= 1 %}disabled{% endif %}
-        >
-          <span class="control-chevron" aria-hidden="true"></span>
-        </button>
+        <div class="recent-news__controls">
+          <button
+            class="recent-news__switch recent-news__switch--previous"
+            type="button"
+            aria-label="Show previous news item"
+            {% if site.data.site.recent_news.size <= 1 %}disabled{% endif %}
+          >
+            <span class="control-chevron" aria-hidden="true"></span>
+          </button>
+          <button
+            class="recent-news__switch recent-news__switch--next"
+            type="button"
+            aria-label="Show next news item"
+            {% if site.data.site.recent_news.size <= 1 %}disabled{% endif %}
+          >
+            <span class="control-chevron" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
       <div class="recent-news__frame">
         {% assign first_news = site.data.site.recent_news[0] %}
