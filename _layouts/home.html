@@ -86,7 +86,27 @@ layout: default
             title="{{ first_news.title }}"
             loading="lazy"
             allowfullscreen
+            {% unless first_news.embed_url %}hidden{% endunless %}
           ></iframe>
+          <a
+            class="recent-news__preview"
+            href="{{ first_news.url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            {% unless first_news.image_url %}hidden{% endunless %}
+          >
+            <img
+              class="recent-news__preview-image"
+              src="{{ first_news.image_url }}"
+              alt=""
+              loading="lazy"
+            >
+            <span class="recent-news__preview-copy">
+              <span class="recent-news__preview-provider">{{ first_news.provider }}</span>
+              <span class="recent-news__preview-title">{{ first_news.title }}</span>
+              <span class="recent-news__preview-description">{{ first_news.description }}</span>
+            </span>
+          </a>
         </div>
         <p class="recent-news__meta">
           <span class="recent-news__provider">{{ first_news.provider }}</span>

@@ -199,10 +199,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var newsButton = document.querySelector(".recent-news__switch");
   var newsData = document.getElementById("recent-news-data");
   var newsEmbed = document.querySelector(".recent-news__embed");
+  var newsPreview = document.querySelector(".recent-news__preview");
+  var newsPreviewImage = document.querySelector(".recent-news__preview-image");
+  var newsPreviewProvider = document.querySelector(".recent-news__preview-provider");
+  var newsPreviewTitle = document.querySelector(".recent-news__preview-title");
+  var newsPreviewDescription = document.querySelector(".recent-news__preview-description");
   var newsProvider = document.querySelector(".recent-news__provider");
   var newsLink = document.querySelector(".recent-news__link");
 
-  if (newsButton && newsData && newsEmbed && newsProvider && newsLink) {
+  if (newsButton && newsData && newsEmbed && newsPreview && newsProvider && newsLink) {
     var newsItems = [];
     var newsIndex = 0;
 
@@ -218,8 +223,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderNewsItem(item) {
-      newsEmbed.src = item.embed_url || item.url || "";
-      newsEmbed.title = item.title || item.provider || "Recent news item";
+      var hasEmbed = Boolean(item.embed_url);
+      var hasPreview = Boolean(item.image_url);
+      var title = item.title || item.provider || "Recent news item";
+
+      newsEmbed.hidden = !hasEmbed;
+      newsEmbed.src = hasEmbed ? item.embed_url : "";
+      newsEmbed.title = title;
+
+      newsPreview.hidden = hasEmbed || !hasPreview;
+      newsPreview.href = item.url || "#";
+
+      if (newsPreviewImage) {
+        newsPreviewImage.src = hasPreview ? item.image_url : "";
+        newsPreviewImage.alt = "";
+      }
+
+      if (newsPreviewProvider) {
+        newsPreviewProvider.textContent = item.provider || "Update";
+      }
+
+      if (newsPreviewTitle) {
+        newsPreviewTitle.textContent = title;
+      }
+
+      if (newsPreviewDescription) {
+        newsPreviewDescription.textContent = item.description || "";
+        newsPreviewDescription.hidden = !item.description;
+      }
+
       newsProvider.textContent = item.provider || "Update";
       newsLink.href = item.url || item.embed_url || "#";
     }

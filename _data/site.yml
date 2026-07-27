@@ -45,7 +45,12 @@ recent_news:
     provider: YouTube
     url: https://www.youtube.com/shorts/uV013BmITLo
     embed_url: https://www.youtube.com/embed/uV013BmITLo
-  - title: LinkedIn Update
+  - title: Research Interview
+    provider: EUI
+    url: https://www.eui.eu/news-hub?id=how-foreign-investments-drive-local-growth-a-conversation-with-daniel-prosi&lang=en-GB
+    image_url: https://www.eui.eu/Content-Types-Assets/Uploads/News/27.07.2026-Daniel-Prosi-research-story-web-banner.x5b85c18d.jpg
+    description: "How foreign investments drive local growth: a conversation with Daniel Prosi"
+  - title: GEP Best Paper Award
     provider: LinkedIn
     url: https://www.linkedin.com/feed/update/urn:li:activity:7451912265219399680/?originTrackingId=wiFu1JW3ZeP7m0l6g1SSRQ%3D%3D
     embed_url: https://www.linkedin.com/embed/feed/update/urn:li:activity:7451912265219399680
