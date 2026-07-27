@@ -82,7 +82,7 @@ layout: default
         <div class="recent-news__embed-shell">
           <iframe
             class="recent-news__embed"
-            src="{{ first_news.embed_url }}"
+            {% if first_news.embed_url %}src="{{ first_news.embed_url }}"{% endif %}
             title="{{ first_news.title }}"
             loading="lazy"
             allowfullscreen
@@ -97,7 +97,7 @@ layout: default
           >
             <img
               class="recent-news__preview-image"
-              src="{{ first_news.image_url }}"
+              {% if first_news.image_url %}src="{{ first_news.image_url }}"{% endif %}
               alt=""
               loading="lazy"
             >
@@ -109,7 +109,7 @@ layout: default
           </a>
         </div>
         <p class="recent-news__meta">
-          <span class="recent-news__provider">{{ first_news.provider }}</span>
+          <span class="recent-news__meta-provider">{{ first_news.provider }}</span>
           <a class="recent-news__link" href="{{ first_news.url }}" target="_blank" rel="noopener noreferrer">Open original</a>
         </p>
       </div>

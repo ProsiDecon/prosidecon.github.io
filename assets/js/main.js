@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var newsPreviewProvider = document.querySelector(".recent-news__preview-provider");
   var newsPreviewTitle = document.querySelector(".recent-news__preview-title");
   var newsPreviewDescription = document.querySelector(".recent-news__preview-description");
-  var newsProvider = document.querySelector(".recent-news__provider");
+  var newsProvider = document.querySelector(".recent-news__meta-provider");
   var newsLink = document.querySelector(".recent-news__link");
 
   if (newsButton && newsData && newsEmbed && newsPreview && newsProvider && newsLink) {
@@ -228,14 +228,22 @@ document.addEventListener("DOMContentLoaded", function () {
       var title = item.title || item.provider || "Recent news item";
 
       newsEmbed.hidden = !hasEmbed;
-      newsEmbed.src = hasEmbed ? item.embed_url : "";
+      if (hasEmbed) {
+        newsEmbed.src = item.embed_url;
+      } else {
+        newsEmbed.removeAttribute("src");
+      }
       newsEmbed.title = title;
 
       newsPreview.hidden = hasEmbed || !hasPreview;
       newsPreview.href = item.url || "#";
 
       if (newsPreviewImage) {
-        newsPreviewImage.src = hasPreview ? item.image_url : "";
+        if (hasPreview) {
+          newsPreviewImage.src = item.image_url;
+        } else {
+          newsPreviewImage.removeAttribute("src");
+        }
         newsPreviewImage.alt = "";
       }
 

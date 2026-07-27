@@ -558,7 +558,7 @@ p {
   font-size: 0.94rem;
 }
 
-.recent-news__provider {
+.recent-news__meta-provider {
   color: var(--accent);
   font-weight: 600;
 }
