@@ -75,13 +75,7 @@ layout: default
             aria-label="Show previous news item"
             {% if site.data.site.recent_news.size <= 1 %}disabled{% endif %}
           >
-            <img
-              class="recent-news__switch-icon"
-              src="{{ '/images/icons/leftarrow.png' | relative_url }}"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-            >
+            <span class="control-chevron" aria-hidden="true"></span>
           </button>
           <button
             class="recent-news__switch recent-news__switch--next"

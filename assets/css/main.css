@@ -475,10 +475,8 @@ p {
   color: rgba(97, 65, 39, 0.72);
 }
 
-.recent-news__switch-icon {
-  width: 1rem;
-  height: 1rem;
-  object-fit: contain;
+.recent-news__switch--previous .control-chevron {
+  transform: rotate(225deg);
 }
 
 .recent-news__frame {
