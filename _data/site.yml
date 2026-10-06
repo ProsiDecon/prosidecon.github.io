@@ -1,9 +1,9 @@
 name: Daniel Prosi
-affiliation: European University Institute
+affiliation: New York University Abu Dhabi
 affiliation_url: https://www.eui.eu/people?id=daniel-prosi-1
-email: daniel.prosi@eui.eu
+email: daniel.prosi@nyu.edu
 description: >
-  PhD student in Economics @ EUI
+  Postdoc in Economics @ NYU
 profile_image: /images/profile/profile.JPG
 hero_image: /images/heros/hero-1.jpg
 hero_images:
@@ -19,7 +19,7 @@ cv_path: /files/CV/CV_prosi.pdf
 social:
   email:
     label: Email
-    href: mailto:daniel.prosi@eui.eu
+    href: mailto:daniel.prosi@nyu.edu
     icon: /images/icons/email.png
   linkedin:
     label: LinkedIn
